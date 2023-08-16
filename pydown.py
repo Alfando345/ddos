@@ -10,6 +10,6 @@ def download_file(url, save_path):
     print("File berhasil diunduh dan disimpan di:", file_path)
 
 url = input("Masukkan URL file yang ingin diunduh: ")
-save_path = "/sdcard/download"
+save_path = "~"
 
 download_file(url, save_path)
